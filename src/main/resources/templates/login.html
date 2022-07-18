@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Prijava</title>
@@ -7,39 +7,40 @@
           integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 <body>
-<section class="vh-100" style="background-color: #eee;">
-    <div class="container h-100">
+<section class="h-100 gradient-form" style="background-color: #121212;">
+    <div class="container py-5 h-100">
         <div class="row d-flex justify-content-center align-items-center h-100">
-            <div class="col-lg-12 col-xl-11">
-                <div class="card text-black" style="border-radius: 25px;">
-                    <div class="card-body p-md-5">
-                        <div class="row justify-content-center">
-                            <div class="col-md-10 col-lg-6 col-xl-5 order-2 order-lg-1">
+            <div class="col-xl-10">
+                <div class="card rounded-3 text-black">
+                    <div class="row g-0">
+                        <div class="col-lg-6">
+                            <div class="card-body p-md-5 mx-md-4">
 
-                                <p class="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">Prijava</p>
+                                <div class="text-center">
+                                    <h4 class="mt-1 mb-5 pb-1">Prijavite se</h4>
+                                </div>
 
-                                <form class="mx-1 mx-md-4" action="#" th:action="@{/login}" method="post">
+                                <form th:action="@{/login}" method="post">
 
-                                    <div class="d-flex flex-row align-items-center mb-4">
-                                        <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
-                                        <div class="form-outline flex-fill mb-0">
-                                            <label class="form-label" for="username">Korisničko ime</label>
-                                            <input type="text" id="username" class="form-control"/>
-                                        </div>
+                                    <div class="form-outline mb-4">
+                                        <label class="form-label" for="form2Example11">Korisničko ime</label>
+                                        <input type="text" id="form2Example11" class="form-control"
+                                               name="username"/>
                                     </div>
 
-                                    <div class="d-flex flex-row align-items-center mb-4">
-                                        <i class="fas fa-lock fa-lg me-3 fa-fw"></i>
-                                        <div class="form-outline flex-fill mb-0">
-                                            <label class="form-label" for="password">Lozinka</label>
-                                            <input type="password" id="password" class="form-control"/>
-                                        </div>
+                                    <div class="form-outline mb-4">
+                                        <label class="form-label" for="form2Example22">Lozinka</label>
+                                        <input type="password" id="form2Example22" class="form-control"
+                                               name="password"/>
                                     </div>
 
-
-                                    <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
-                                        <button type="submit" class="btn btn-primary btn-lg">Prijavi se</button>
+                                    <div class="text-center pt-1 mb-5 pb-1">
+                                        <button class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3"
+                                                type="submit">
+                                            Prijava
+                                        </button>
                                     </div>
+
                                     <div class="d-flex align-items-center justify-content-center pb-4">
                                         <p class="mb-0 me-2">Nemate račun?</p>
                                         <div>
@@ -48,21 +49,20 @@
                                     </div>
 
                                     <div th:if="${param.error}" class="alert alert-danger">
-                                        Pogrešno korisničko ime ili lozinka.
+                                        Pogrešno ime ili lozinka.
                                     </div>
                                     <div th:if="${param.logout}" class="alert alert-danger">
                                         Odjavljeni ste.
                                     </div>
 
-
                                 </form>
 
                             </div>
-                            <div class="col-md-10 col-lg-6 col-xl-7 d-flex align-items-center order-1 order-lg-2">
-
-                                <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-registration/draw1.webp"
-                                     class="img-fluid" alt="Sample image">
-
+                        </div>
+                        <div class="col-lg-6 d-flex align-items-center gradient-custom-2">
+                            <div class="text-black px-3 py-4 p-md-5 mx-md-4">
+                                <img src="https://gamestoreksa.com/images/1349/image/catalog/logo.jpg"
+                                     style="width: 100%;">
                             </div>
                         </div>
                     </div>
