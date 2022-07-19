@@ -26,11 +26,6 @@ public class UserController {
     @Autowired
     private UserRepository userRepository;
 
-//    @GetMapping("/")
-//    public String viewUsers() {
-//        return "index";
-//    }
-
     @GetMapping("/")
     public String viewAdmin() {
         return "admin";

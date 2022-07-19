@@ -16,6 +16,7 @@
             <th>First Name</th>
             <th>Last Name</th>
             <th>Email</th>
+            <th>Privilege</th>
         </tr>
         </thead>
         <tbody>
@@ -23,6 +24,7 @@
             <td th:text="${korisnik.getFirstName()}"></td>
             <td th:text="${korisnik.getLastName()}"></td>
             <td th:text="${korisnik.getEmail()}"></td>
+            <td th:text="${korisnik.getPrivilege()}"></td>
             <td><a th:href="@{/delete/{id}(id=${korisnik.getId()})}" class="btn btn-primary btn-sm mb-3" style="background-color: #d91c1c">Delete User</a></td>
         </tr>
         </tbody>
