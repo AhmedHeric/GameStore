@@ -31,7 +31,7 @@ public class UserController {
         return "admin";
     }
 
-    @GetMapping("/delete/{id}")
+    @GetMapping("/deleteUser/{id}")
     public String deleteUser(@PathVariable("id") long id) {
         User user = userRepository.findById(id)
                 .orElseThrow(() -> new IllegalArgumentException("Neisparavan korisnički ID: " + id));
@@ -43,7 +43,7 @@ public class UserController {
     public String viewUsers(Model model) {
         List<User> userList = userService.getAllUsers();
         model.addAttribute("listaKorisnika", userList);
-        return "index";
+        return "userMgm";
     }
 
     @GetMapping("/login")
