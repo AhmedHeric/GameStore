@@ -31,6 +31,11 @@ public class UserController {
         return "admin";
     }
 
+    @GetMapping("/home")
+    public String viewHomePage() {
+        return "home";
+    }
+
     @GetMapping("/deleteUser/{id}")
     public String deleteUser(@PathVariable("id") long id) {
         User user = userRepository.findById(id)

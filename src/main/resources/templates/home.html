@@ -1,10 +1,237 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Game store</title>
+    <title>Game Store</title>
+    <link rel="stylesheet" href="/css/home.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+          rel="stylesheet">
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/fontawesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css"
+          integrity="sha384-eoTu3+HydHRBIjnCVwsFyCpUDZHZSFKEJD0mc3ZqSBSb6YhZzRHeiomAUWCstIWo" crossorigin="anonymous">
 </head>
 <body>
 
+<div class="heder">
+    <div class="container">
+        <div class="navbar">
+            <div class="logo">
+                <img src="/image/logoTransparent.png" width="100px">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="">Početna</a></li>
+                    <li><a th:href="@{/products}" href="">Proizvodi</a></li>
+                    <li><a th:href="@{/login}" href="">Prijavi se</a></li>
+                </ul>
+            </nav>
+            <img src="/image/renameCart.png" width="30px" height="30px">
+            <img src="/image/menu.png" class="menu-icon">
+        </div>
+        <div class="row">
+            <div class="col-2">
+                <h1>NEKI TEKST<br> CE DA IDE OVJDE</h1>
+                <p>ovdje ide neki test koji cu da vidim kako ide fsdfsdf fafa agfasga<br> gasg fasfas fsaf</p>
+                <a href="" class="btn">Explore now &#8594;</a>
+            </div>
+            <div class="col-2">
+                <img src="/image/gaming.jpg">
+            </div>
+        </div>
+    </div>
+</div>
+
+<!---feature categories---->
+
+<div class="categories">
+    <div class="small-container">
+        <div class="row">
+            <div class="col-3">
+                <img src="/image/gtav.png">
+            </div>
+            <div class="col-3">
+                <img src="/image/csgo.png">
+            </div>
+            <div class="col-3">
+                <img src="/image/ets2.png">
+            </div>
+        </div>
+    </div>
+</div>
+
+<!---feature productrs---->
+
+<div class="small-container">
+    <h2 class="title">Preporučeno</h2>
+    <div class="row">
+        <div class="col-4">
+            <img src="/image/rocketleague.png" alt="">
+            <h4>Rocket League</h4>
+            <div class="rating">
+                <i class="fa-thin fa-star"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+            </div>
+            <p>23 KM</p>
+        </div>
+
+        <div class="col-4">
+            <img src="/image/gtav.png" alt="">
+            <h4>GTA V</h4>
+            <div class="rating">
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+
+            </div>
+            <p>30 KM</p>
+        </div>
+        <div class="col-4">
+            <img src="/image/ets2.png" alt="">
+            <h4>Euro Truck Simulator 2</h4>
+            <div class="rating">
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star-o" aria-hidden="true"></i>
+
+            </div>
+            <p>13 KM</p>
+        </div>
+        <div class="col-4">
+            <img src="/image/csgo.png" alt="">
+            <h4>Counter Strike:Global Offansive</h4>
+            <div class="rating">
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+
+            </div>
+            <p>17 KM</p>
+        </div>
+    </div>
+    <h2 class="title">Najnovije igre</h2>
+    <div class="row">
+        <div class="col-4">
+            <img src="/image/stray.png" alt="">
+            <h4>Stray</h4>
+            <div class="rating">
+                <i class="fa-thin fa-star"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+
+            </div>
+            <p>60 KM</p>
+        </div>
+
+        <div class="col-4">
+            <img src="/image/sims4.png" alt="">
+            <h4>The Sims 4</h4>
+            <div class="rating">
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+
+            </div>
+            <p>32 KM</p>
+        </div>
+        <div class="col-4">
+            <img src="/image/spiderman.png" alt="">
+            <h4>Spider-Man Remaster</h4>
+            <div class="rating">
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star-o" aria-hidden="true"></i>
+
+            </div>
+            <p>38 KM</p>
+        </div>
+        <div class="col-4">
+            <img src="/image/residentevil4.png" alt="">
+            <h4>Resident Evil 4</h4>
+            <div class="rating">
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+
+            </div>
+            <p>32 KM</p>
+        </div>
+    </div>
+
+</div>
+
+
+<!---offer-->
+
+<div class="offer">
+    <div class="small-container">
+        <div class="row">
+            <div class="col-2">
+                <img src="/image/overwatch2.png" class="offer-img">
+            </div>
+            <div class="col-2">
+                <p>Posebna ponuda</p>
+                <h1>OverWatch 2</h1>
+                <small>Naručite i igrajte prije ostalih. Datum izlaska: 2. oktobar 2022.</small>
+                <a href="" class="btn">Naručite odmah &#8594;</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-----brandovi------->
+<div class="brands">
+    <div class="small-container">
+        <div class="row">
+            <div class="col-5">
+                <img src="/image/valve.png">
+            </div>
+            <div class="col-5">
+                <img src="/image/rocketleague.png">
+            </div>
+            <div class="col-5">
+                <img src="/image/eagames.png">
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-----footer-->
+
+<div class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="footer-col-1">
+                <h3>Preuzmite našu aplikaciju</h3>
+                <p>Preuzmite našu aplikaciju za Android i iOS</p>
+                <div class="app-logo">
+                    <img src="/image/play-store.png">
+                    <img src="/image/app-store.png">
+                </div>
+            </div>
+            <div class="footer-col-2">
+                <img src="/image/logo.jpg">
+                <p>Game Store</p>
+            </div>
+            <div class="footer-col-3">
+                <h3>Korisni linkovi</h3>
+                <ul>
+                    <li>Null</li>
+                    <li>Null</li>
+                    <li>Null</li>
+                    <li>Null</li>
+                </ul>
+            </div>
+
+            <div class="footer-col-4">
+                <h3>Pratite nas na</h3>
+                <ul>
+                    <li>Facebook</li>
+                    <li>Twitter</li>
+                    <li>Instagram</li>
+                    <li>Youtube</li>
+                </ul>
+            </div>
+
+        </div>
+
+        <!----OVO I NE TREBA -->
+        <!--        <hr>-->
+        <!--        <p class="copyright">Copyright 2022</p>-->
+    </div>
+</div>
 </body>
 </html>

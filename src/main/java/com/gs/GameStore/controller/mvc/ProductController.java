@@ -22,7 +22,7 @@ public class ProductController {
     @Autowired
     private ProductRepository productRepository;
 
-    @GetMapping("/products")
+    @GetMapping("/productsControl")
     public String viewProducts(Model model) {
         List<Product> productList = productService.getAllProducts();
         model.addAttribute("listaProizvoda", productList);
@@ -47,5 +47,15 @@ public class ProductController {
     public String productImplementation(@ModelAttribute("prazanProduct") Product product) {
         productService.saveProduct(product);
         return "redirect:/";
+    }
+
+    @GetMapping("/products")
+    public String viewProduct() {
+        return "products";
+    }
+
+    @GetMapping("/productDetails")
+    public String viewProductDetails() {
+        return "productDetails";
     }
 }
